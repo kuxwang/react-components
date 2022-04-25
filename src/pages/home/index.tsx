@@ -1,7 +1,24 @@
-import React from 'react';
+import React,{ Component} from 'react';
 
-const Home = () =>(
-  <div>Home</div>
-)
+interface IProps {
+
+}
+interface IState {}
+class Home extends Component<IProps,IState> {
+  constructor(props:IProps) {
+    super(props);
+    this.state = {
+      
+    }
+  }
+
+
+  render(){
+    return <div>Home</div>
+  }
+
+}
+
+
 
 export default Home

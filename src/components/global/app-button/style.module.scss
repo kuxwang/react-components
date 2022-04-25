@@ -1,0 +1,46 @@
+.button {
+  height: 44px;
+  background: #128BED;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 44px;
+  text-align: center;
+  padding: 0 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  &.primary {
+    background: #128BED;
+    color:#fff;
+  }
+  &.normal {
+    background: #E5F2FD;
+    color: #333
+  }
+  &.warning {
+    background: #E6A23B;
+    color:#fff;
+  }
+  &.danger {
+    background: #D13E5B;
+    color:#fff;
+  }
+  &.large {
+    width: 100%;
+    display: block;
+  }
+  &.medium {
+  }
+  &.small {
+    height: 30px;
+    padding: 6px 8px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  & + .button {
+    margin-left: 12px;
+  }
+}
+
