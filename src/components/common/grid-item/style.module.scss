@@ -1,0 +1,18 @@
+.item {
+    display: inline-block;
+  .icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(18, 139, 237, 0.08);
+    border-radius: 14px 14px 14px 14px;
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+  .name {
+    height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 18px;
+  }
+}
