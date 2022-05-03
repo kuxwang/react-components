@@ -1,5 +1,7 @@
-
-module.export ={
-
-
+module.exports ={
+  style: {
+    postcss:{
+      mode:"file"
+    }
+  }
 }
