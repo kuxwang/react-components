@@ -3,7 +3,7 @@
   background: #128BED;
   border-radius: 4px;
   font-size: 16px;
-  font-family: PingFangSC-Regular, PingFang SC;
+  // font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 44px;
@@ -30,6 +30,8 @@
   &.large {
     width: 100%;
     display: block;
+    text-align: center;
+    padding:0;
   }
   &.medium {
   }

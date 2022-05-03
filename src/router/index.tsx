@@ -6,6 +6,7 @@ import Home from '../pages/home'
 const List = lazy(() => import('../pages/list'))
 const Detail = lazy(() => import('../pages/detail'))
 const About = lazy(() => import('../pages/about'))
+const User = lazy(() => import('../pages/user'))
 const Demo = lazy(() => import('../pages/demo'))
 
 const AppRouter = () => (
@@ -16,6 +17,7 @@ const AppRouter = () => (
         <Route path="/list" element={<List/>}></Route>
         <Route path="/detail" element={<Detail/>}></Route>
         <Route path="/about" element={<About/>}></Route>
+        <Route path="/user" element={<User/>}></Route>
         <Route path="/demo" element={<Demo/>}></Route>
       </Routes>
     </BrowserRouter>

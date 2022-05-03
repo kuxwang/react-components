@@ -10,11 +10,11 @@ interface IProps {}
 const Home: React.FC<IProps> = (props) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-      axios.get("/getUserInfo?userId=112").then((res: any) =>{
-        console.log(res)
-      })
-  });
+  // useEffect(() => {
+  //     axios.get("/getUserInfo?userId=112").then((res: any) =>{
+  //       console.log(res)
+  //     })
+  // });
 
   return (
     <div className="flex">
@@ -22,7 +22,6 @@ const Home: React.FC<IProps> = (props) => {
       <GridItem name="查招聘" icon="111"></GridItem>
       <GridItem name="查招聘" icon="111"></GridItem>
       <GridItem name="查招聘" icon="111"></GridItem>
-      <div className="aaa"></div>
     </div>
   );
 };

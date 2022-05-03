@@ -8,22 +8,27 @@ interface IProps {
   type?: Type;
   size?: Size;
   onClick?: (event: any) => void;
-  children?: any
+  children?: any;
+  forwardedRef?: any
 }
 const genClassName = (style: any, props: any): any => {
   return [style.button, style[props.type], style[props.size]].join(" ");
 };
-const AppButton :React.FC<IProps> = (props) => {
+const AButton :React.FC<IProps> = (props) => {
   return (
-    <div className={genClassName(style, props)} onClick={props.onClick}>
+    <div className={genClassName(style, props)} onClick={props.onClick} ref={props.forwardedRef}>
       {props.name || props.children}
     </div>
   );
 };
 
-AppButton.defaultProps = {
+AButton.defaultProps = {
   type: "normal",
   size: "medium",
 };
+
+const AppButton = React.forwardRef((props:any, ref:any) => {
+  return (<AButton  {...props} forwardedRef={ref}></AButton>)
+})
 
 export default AppButton;
