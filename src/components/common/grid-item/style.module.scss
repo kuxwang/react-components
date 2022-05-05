@@ -1,12 +1,19 @@
 .item {
-    display: inline-block;
+  height:98px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   .icon {
     width: 42px;
     height: 42px;
     background: rgba(18, 139, 237, 0.08);
     border-radius: 14px 14px 14px 14px;
     opacity: 1;
+    margin: 0 auto;
     margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    color: #128bed;
   }
   .name {
     height: 18px;
