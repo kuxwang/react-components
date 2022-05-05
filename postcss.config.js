@@ -2,7 +2,8 @@ const path = require('path')
 module.exports=({file})=>{
   return {
     plugins: {
-      // tailwindcss: {},
+      'tailwindcss':{},
+      'autoprefixer':{},
       // overrideBrowserslist: ['last 20 versions', 'android >= 4.0', 'iOS >= 7'],
       'postcss-px-to-viewport-with-include': {
         unitToConvert: 'px', // 要转化的单位
