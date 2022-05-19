@@ -10,6 +10,7 @@ interface IProps {}
 interface IGridItem {
 	icon: string;
 	name: string;
+	path: string;
 	id?: string | number;
 }
 
@@ -26,27 +27,32 @@ const Home: React.FC<IProps> = (props) => {
 				name: "查老板",
 				icon: "icon-233",
 				id: "1",
+				path: "todo",
 			},
 			{
 				name: "查关系",
 				icon: "icon-233",
 				id: "2",
+				path: "detail",
 			},
 			{
 				name: "受益所有人",
 				icon: "icon-233",
 				id: "3",
+				path: "detail",
 			},
 			{
 				name: "司法拍卖",
 				icon: "icon-233",
 				id: "4",
+				path: "detail",
 			},
 		];
 		setList(list);
 	}, []);
-	const goTo = (id: any): void => {
-		console.log(id);
+	const goTo = (path: string, id: any): void => {
+		// console.log(id);
+		navigate(`/${path}`, {state:{id:1}});
 	};
 
 	return (
@@ -57,7 +63,7 @@ const Home: React.FC<IProps> = (props) => {
 						name={item.name}
 						icon={item.icon}
 						key={item.id}
-						onClick={() => goTo(item.id)}
+						onClick={() => goTo(item.path, item.id)}
 					></GridItem>
 				))}
 			</div>
