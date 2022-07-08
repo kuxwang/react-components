@@ -1,5 +1,5 @@
 
-import {createSlice,configureStore } from '@reduxjs/toolkit'
+import {createSlice } from '@reduxjs/toolkit'
 
 const counterSlice = createSlice({
   name: 'counter',
@@ -8,17 +8,13 @@ const counterSlice = createSlice({
   },
   reducers: {
     incremented: (state) =>{
-      console.log('incremented')
       state.value += 1;
     },
     decrement:state => {
-      console.log('decrement')
 
       state.value -= 1
     },
     incrementByAmount: (state,action) =>{
-      console.log('incrementByAmount')
-
       state.value += action.payload
     }
   },
@@ -26,12 +22,12 @@ const counterSlice = createSlice({
 
 export const {incremented,decrement,incrementByAmount}  = counterSlice.actions
 
-export const incrementAsync = (amount) => dispatch => {
+export const incrementAsync = (amount:string|number) => (dispatch: (arg0: { payload: any; type: string; }) => void) => {
   setTimeout(() =>{
     dispatch(incrementByAmount(amount))
   },1000)
 }
 
-export const selectCount = state => state.counter.value
+export const selectCount = (state: { counter: { value: any; }; }) => state.counter.value
 
 export default counterSlice.reducer

@@ -9,6 +9,7 @@ const About = lazy(() => import("../pages/about"));
 const User = lazy(() => import("../pages/user"));
 const Demo = lazy(() => import("../pages/demo"));
 const Todo = lazy(() => import("../pages/todo"));
+const Count = lazy(() => import("../pages/count"));
 
 const AppRouter = () => (
 	<Fragment>
@@ -22,6 +23,7 @@ const AppRouter = () => (
 					<Route path="/user" element={<User />}></Route>
 					<Route path="/demo" element={<Demo />}></Route>
 					<Route path="/todo" element={<Todo />}></Route>
+					<Route path="/count" element={<Count />}></Route>
 				</Routes>
 			</Suspense>
 		</BrowserRouter>

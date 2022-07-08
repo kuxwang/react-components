@@ -19,9 +19,6 @@ const Home: React.FC<IProps> = (props) => {
 	const [list, setList] = useState<Array<IGridItem>>([] as Array<IGridItem>);
 
 	useEffect(() => {
-		// axios.get("/getUserInfo?userId=112").then((res: any) =>{
-		//   console.log(res)
-		// })
 		const list: IGridItem[] = [
 			{
 				name: "查老板",
@@ -33,7 +30,7 @@ const Home: React.FC<IProps> = (props) => {
 				name: "查关系",
 				icon: "icon-233",
 				id: "2",
-				path: "detail",
+				path: "count",
 			},
 			{
 				name: "受益所有人",
